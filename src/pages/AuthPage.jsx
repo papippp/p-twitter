@@ -39,7 +39,7 @@ export default function AuthPage() {
     }
 
     const provider = new GoogleAuthProvider()
-    const handleGoogleLogin = async (e) => {
+    const handleGoogleLogin = async () => {
         try {
             await signInWithPopup(auth, provider)
         } catch (error) {
@@ -78,6 +78,10 @@ export default function AuthPage() {
 
                     <Button variant='outline-dark' className='rounded-pill'>
                         <i className='bi bi-apple'></i> Sign up with Apple
+                    </Button>
+
+                    <Button variant='outline-dark' className='rounded-pill'>
+                        <i className='bi bi-facebook'></i> Sign up with Facebook
                     </Button>
 
                     <p style={{ textAlign: 'center' }}>Or</p>
